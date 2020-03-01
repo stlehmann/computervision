@@ -10,5 +10,6 @@ setup(
     license='MIT',
     author='Stefan Lehmann',
     author_email='stlm@posteo.de',
-    description='some computervision examples'
+    description='some computervision examples',
+    install_requires=['imutils', 'cv2'],
 )
