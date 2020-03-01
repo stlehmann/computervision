@@ -1,4 +1,3 @@
-import numpy as np
 import imutils
 import cv2
 from utils import combine_rects
@@ -6,7 +5,7 @@ from utils import combine_rects
 cap = cv2.VideoCapture(0)
 fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=False)
 
-while(1):
+while 1:
     ret, frame = cap.read()
     frame = imutils.resize(frame, width=500)
 
@@ -34,7 +33,6 @@ while(1):
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
     cv2.imshow("frame", frame)
-    # cv2.imshow('fgmask', fgmask)
     cv2.imshow('thresh', thresh)
     k = cv2.waitKey(30) & 0xff
     if k == ord("q"):
